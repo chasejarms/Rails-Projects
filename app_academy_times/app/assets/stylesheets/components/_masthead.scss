@@ -8,10 +8,10 @@
 
 .language-nav {
 	position: absolute;
-	top: -15px;
+	top: -16px;
 	left: calc(50% - (177.78px/2));
 	background: white;
-	border: 1px solid $light-gray;
+	border: 2px solid $light-gray;
 	border-bottom: none;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
@@ -23,6 +23,10 @@
 	font-family: $sans-serif;
 	font-size: 10px;
 	color: $dark-gray;
+}
+
+.language-nav li:first-child {
+	font-weight: bold;
 }
 
 .language-nav ul {
@@ -47,6 +51,14 @@
 	border-right: 1px solid $light-gray;
 }
 
+.masthead-links li {
+	padding-right: 10px;
+}
+
+.masthead-links li:last-child {
+	border-right: none;
+}
+
 .masthead-links button {
 	background: none;
 	padding: 0px;
@@ -56,13 +68,13 @@
 }
 
 .masthead-links button:hover {
-	background-color: $lightest-gray;
+	background-color: $light-gray;
 }
 
-.masthead-links a,
-.masthead-links button, 
+.masthead-links button,
 .masthead-links time {
 	margin-right: 10px;
+	font-size: 12px;
 }
 
 .masthead-links i {

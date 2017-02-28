@@ -1,5 +1,16 @@
 /* Define application-wide selectors here!*/
 
+/*
+
+In stylesheets/base/layout.scss, style the body:
+
+Apply a width of 80%.
+Center using margin: 0 auto;.
+Set the base font to font-family: $serif.
+Set 12px as the default font-size.
+
+*/
+
 html {
 	position: relative;
 	height: 100%;
@@ -7,27 +18,77 @@ html {
 
 body {
 	// ...
+	width: 80%;
+	margin: 0 auto;
+	font-family: $serif;
+	font-size: 12px;
 }
+
+/*
+
+In stylesheets/base/layout.scss:
+
+Style the buttons to look like the buttons in the mockup.
+each css property has been provided as a comment
+
+$lightest-gray: #f7f7f5;
+$light-gray: #e2e2e2;
+$gray: #999;
+$dark-gray: #6f6f6f;
+
+$lightest-blue: #f0f8fc;
+$light-blue: #6288a5;
+$blue: #326891;
+$dark-blue: #4d7b9f;
+$darkest-blue: #265e8b;
+*/
 
 button {
-	// background-color:
-	// border-color:
-	// color:
-	// font-weight:
-	// padding:
-	// border-radius:
-	// transition:
-	// font-family:
-	// text-transform:
-	// font-size:
-	// text-align:
+	font-weight: normal;
+	padding: 10px;
+	border-radius: 3px;
+	transition: all .3s ease 0s;
+	font-family: sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
 }
 
-button:hover {
-	// background-color:
-	// border-color:
+button.grey-button {
+	background-color: transparent;
+	border-color: transparent;
+	color: inherit;
 }
 
+button.blue-button {
+	background-color: $dark-blue;
+	border-color: $darkest-blue;
+	color: white;
+}
+
+button.grey-button:hover {
+	background-color: $light-gray;
+	border-color: $light-gray;
+}
+
+button.blue-button:hover {
+	background-color: $blue;
+	border-color: $blue;
+}
+
+.left-nav button i {
+	padding-right: 5px;
+}
+
+.fa-cog-button {
+	padding-top: 7px;
+	padding-bottom: 10px;
+}
+
+.fa.fa-cog {
+	font-size: 20px;
+}
 /*
 	Header Rules
 */
@@ -46,4 +107,12 @@ hr {
 .hr-top {
 	height: 2px;
 	margin-bottom: 1px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.hidden {
+	display: none;
 }

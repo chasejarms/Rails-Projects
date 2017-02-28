@@ -1,14 +1,44 @@
+<!--
+In /views/shared/_main_nav.html.erb:
+
+Add a <nav> with the class "right-nav". Make sure it's contained within the "main-nav" element.
+Add a ul element to your new nav. Make the buttons and gear icon list items of this unordered list.
+Add "Subscribe Now" and "Log In" buttons.
+Add the gear icon.
+Use this list of Font Awesome icon classes to find the right gear image.
+Use the "Sections" and "Search" buttons defined in the left-nav as guides.
+
+ -->
+
 <header class="main-nav">
 	<nav class="left-nav">
-		<ul>
-			<li id="sections-sidebar-btn">
-				<i class="fa fa-bars"></i>
-				<span>sections</span>
-			</li>
-			<li id="search-modal-btn">
-				<i class="fa fa-search"></i>
-				<span>search</span>
-			</li>
-		</ul>
+
+		<button href="#" class="grey-button">
+			<i class="fa fa-bars grey-button"></i>
+			sections
+		</button>
+
+		<button href="#" class="grey-button">
+			<i class="fa fa-search grey-button"></i>
+			search
+		</button>
+
+	</nav>
+
+	<nav class="right-nav">
+
+		<button href="#" class="blue-button">
+			Subscribe Now
+		</button>
+
+		<button href="#" class="blue-button">
+			Log In
+		</button>
+		<section class="gear-dropdown-section">
+			<button id="gear-dropdown-btn" href="#" class="grey-button fa-cog-button">
+				<i class="fa fa-cog"></i>
+			</button>
+			<%= render partial: 'shared/gear_dropdown' %>
+		</section>
 	</nav>
 </header>

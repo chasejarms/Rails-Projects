@@ -1,19 +1,46 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
 .col {
-  // ...
+  margin-right: 20px;
+}
+
+.youtube-container iframe {
+  width: 100%;
+  min-height: 300px;
+}
+
+.col:after {
+  clear: both;
+  content: "";
+}
+
+.col-1-5 {
+  width: 20%;
+}
+.col-2-5 {
+  width: 40%;
 }
 
 /* Attribute selector targeting all elements
 with a class attribute containing 'col-' */
 [class*='col-'] {
   // ...
+  box-sizing: border-box;
+  background-color: grey;
+  float: left;
 }
 
 [class*='col-']:last-of-type {
   // ...
+  margin-right: 0px;
 }
 
 @media all and (max-width: 1000px) {
   [class*='col-'] {
-    // width:
+    width: 100%;
   }
 }

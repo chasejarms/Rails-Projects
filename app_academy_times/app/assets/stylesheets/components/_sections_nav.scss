@@ -1,0 +1,35 @@
+// Follow the patterns and coding patterns described above to style the Sections Nav component. Define its styles in stylesheets/components/_sections_nav.scss and HTML in views/shared/_sections_nav.html.erb file. Copy and paste the text content from docs/copy/sections_nav.txt. Once you have fully completed the Sections Nav bar call over a TA to code review your Header!
+
+.topics-header-nav {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid $light-gray;
+}
+
+.topics-header-nav li {
+  float: left;
+}
+.topics-header-nav li:hover button {
+  background-color: $light-gray;
+}
+.topics-header-nav li:hover:last-child button {
+  background-color: transparent;
+}
+
+.topics-header-nav button {
+  float: left;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0px;
+  text-transform: none;
+}
+
+.topics-header-nav li:last-child button {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
